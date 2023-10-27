@@ -141,7 +141,7 @@ function HomePage() {
   return (
     <div className="bg-gray-100 p-8">
       <div className="max-w-full mx-auto bg-white p-6 rounded shadow-md">
-        <h1 className="text-2xl font-semibold mb-4">Home Page</h1>
+        <h1 className="text-2xl font-semibold mb-4">Cricket Matches</h1>
         <button
           onClick={openModal}
           className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -261,11 +261,10 @@ function HomePage() {
                 <ul className="flex flex-wrap mt-2 mb-5 my-auto">
                   {team.teamMembers.map((member, memberIndex) => (
                     <li
-                      className={`${
-                        memberIndex > 10
-                          ? "bg-[#c3c3c3] text-[#000000]"
-                          : "bg-[#2d2d2d] text-white"
-                      } mr-2 mb-2 px-4 py-1 rounded-md font-semibold`}
+                      className={`${memberIndex > 10
+                        ? "bg-[#c3c3c3] text-[#000000]"
+                        : "bg-[#2d2d2d] text-white"
+                        } mr-2 mb-2 px-4 py-1 rounded-md font-semibold`}
                       key={memberIndex}
                     >
                       {member}
