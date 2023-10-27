@@ -1,0 +1,90 @@
+body,
+html {
+  margin: 0;
+  /* Remove default margins */
+  width: 100%;
+  /* Fill the entire width of the viewport */
+}
+
+.coin-container {
+  position: relative;
+  text-align: center;
+}
+
+.toss-animation {
+  animation: toss-rotate 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes toss-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.coin {
+  width: 100px;
+  height: 100px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  transition: transform 0.6s ease;
+}
+
+.coin.tossing {
+  animation: toss-animation 0.6s ease-in-out;
+}
+
+@keyframes toss-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.toss-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.toss-button:focus {
+  outline: none;
+}
+
+.two-columns-container {
+  display: flex;
+  height: 100%;
+  /* Full height of the parent container */
+}
+
+
+.column {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Vertically center content */
+}
+
+.left-component {
+  background-color: lightblue;
+}
+
+.right-component {
+  background-color: lightgreen;
+}
+
+.playerList {
+  display: flex;
+}
+
